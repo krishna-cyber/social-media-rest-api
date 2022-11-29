@@ -3,12 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   dotenv: ^16.0.3
   express: ^4.18.2
+  helmet: ^6.0.0
   mongoose: ^6.7.4
   morgan: ^1.10.0
 
 dependencies:
   dotenv: 16.0.3
   express: 4.18.2
+  helmet: 6.0.0
   mongoose: 6.7.4
   morgan: 1.10.0
 
@@ -1079,6 +1081,11 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+    dev: false
+
+  /helmet/6.0.0:
+    resolution: {integrity: sha512-FO9RpR1wNJepH/GbLPQVtkE2eESglXL641p7SdyoT4LngHFJcZheHMoyUcjCZF4qpuMMO1u5q6RK0l9Ux8JBcg==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /http-errors/2.0.0:
