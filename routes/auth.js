@@ -13,7 +13,14 @@ router.post("/register", async (req, res) => {
     email: req.body.email,
     password: req.body.password,
   });
-  await user.save();
+  await user
+    .save()
+    .then((user) => {
+      res.send(user);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
   //sending response
   res.status(200).send("registered");
