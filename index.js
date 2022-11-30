@@ -10,16 +10,13 @@ dotenv.config();
 //creating an express server
 const app = express();
 //Database connection with mongoose
-mongoose.connect(
-  process.env.MONGO,
-  {
+mongoose
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  },
-  () => {
-    console.log("Connected to MongoDB");
-  }
-);
+  })
+  .then(() => console.log("Database connected!"))
+  .catch((err) => console.log(err));
 //using middleware
 app.use(express.json());
 app.use(helmet());
