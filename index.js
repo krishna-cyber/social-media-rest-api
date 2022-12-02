@@ -5,7 +5,8 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
-//Configuring enviromental variable
+const cors = require("cors");
+//Configuring environmental variable
 dotenv.config();
 //creating an express server
 const app = express();
@@ -21,6 +22,7 @@ mongoose
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+app.use(cors());
 
 //using routes
 app.use("/api/user", userRoutes);
