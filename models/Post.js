@@ -24,4 +24,4 @@ const postSchema = new mongoose.Schema(
 );
 
 //exporting models to use in other files
-module.exports = mongoose.model("Post", userSchema);
+module.exports = mongoose.model("Post", postSchema);
